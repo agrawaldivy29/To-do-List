@@ -27,7 +27,7 @@ app.use(express.static("public"));
 // var itemArray = [];
 var workItems = [];
 
-app.get("to-do-list-one-rust.vercel.app/", (req, res) => {
+app.get("/", (req, res) => {
 
     // const date = dateApp.getDate();
 

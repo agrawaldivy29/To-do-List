@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require('mongoose');
+const ejs = require("ejs");
 const app = express();
 const _ = require("lodash");
 const dateApp = require(__dirname + "/date.js");
@@ -23,9 +24,6 @@ const defaultItems = [item1, item2, item3];
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static("public"));
-
-// var itemArray = [];
-var workItems = [];
 
 app.get("/", (req, res) => {
 
